@@ -201,6 +201,20 @@ body {
   margin-right: 1.6rem !important;
 }
 
+.btn-arrow-relative {
+  position: relative;
+  padding-right: 5.2rem !important;
+}
+
+.arrow-down-icon {
+  position: absolute;
+  top: 50%;
+  left: 73%;
+  transform: translate(25%, -50%);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
 strong {
   font-weight: 500;
 }
