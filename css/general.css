@@ -82,6 +82,9 @@ html {
   /* Percentage of user's browser font-size setting */
 
   overflow-x: hidden;
+
+  /* Does NOT work on Safari and Microsoft Edge */
+  /* scroll-behavior: smooth; */
 }
 
 body {
