@@ -292,36 +292,6 @@ body {
   box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
-/* .social-link:focus {
-  outline: initial;
-  box-shadow: none;
-} */
-
-/* .social-icon {
-  object-fit: cover;
-} */
-
-/* .social-link {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-.social-icon:focus + .social-link::after {
-  content: " (" attr(href) ")";
-  display: inline;
-} */
-
-/* .social-links:link,
-.social-links :focus {
-  outline: initial !important;
-  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
-  box-shadow: none;
-} */
-
-/* .social-links ion-icon {
-  --ionicon-stroke-width: 2.4rem;
-} */
-
 /* HELPER/SETTINGS CLASSES */
 
 .center-text {

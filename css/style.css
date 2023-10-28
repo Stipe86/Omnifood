@@ -615,6 +615,11 @@
   gap: 2.4rem;
 }
 
+.social-link {
+  display: block;
+  height: 2.4rem;
+}
+
 .social-icon {
   height: 2.4rem;
   width: 2.4rem;
