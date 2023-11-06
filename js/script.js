@@ -6,7 +6,13 @@ const btnNav = document.querySelector(".btn-mobile-nav");
 
 const headerEl = document.querySelector(".header");
 
+const sectionHeroEl = document.querySelector(".section-hero");
+
 const currentYear = new Date().getFullYear();
+
+// const arrowDownEl = document.querySelector(".arrow-down-icon");
+
+// const arrowDownEl = document.querySelector(".section-hero");
 
 // Set current year
 
@@ -16,6 +22,7 @@ yearEl.textContent = currentYear;
 
 btnNav.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
+  sectionHeroEl.classList.toggle("nav-open");
 });
 
 /////////////////////////////////////////////////
@@ -51,7 +58,6 @@ allLinks.forEach(function (link) {
 
 /////////////////////////////////////////////////
 // Sticky navigation
-const sectionHeroEl = document.querySelector(".section-hero");
 
 const observer = new IntersectionObserver(
   function (entries) {
@@ -68,3 +74,25 @@ const observer = new IntersectionObserver(
   }
 );
 observer.observe(sectionHeroEl);
+
+//////////////////////////////////////////////////////////////
+// Fixing flexbox gap property missing in some Safari versions
+
+function checkFlexGap() {
+  var flex = document.createElement("div");
+  flex.style.display = "flex";
+  flex.style.flexDirection = "column";
+  flex.style.rowGap = "1px";
+
+  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement("div"));
+
+  document.body.appendChild(flex);
+  var isSupported = flex.scrollHeight === 1;
+  flex.parentNode.removeChild(flex);
+  console.log(isSupported);
+
+  if (!isSupported) document.body.classList.add("no-flexbox-gap");
+}
+
+checkFlexGap();
